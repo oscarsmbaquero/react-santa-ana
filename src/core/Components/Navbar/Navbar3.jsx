@@ -28,7 +28,7 @@ function OffcanvasExample() {
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
               onClick={toggleMenu}
-            />
+            ></Navbar.Toggle>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -47,10 +47,10 @@ function OffcanvasExample() {
                   <NavLink as={Link} to={"/"} className="custom-link" onClick={toggleMenu}>
                     <FormattedMessage id="app.home" />
                   </NavLink>
-                  {/* <NavLink as={Link} to={"/contact"} className="custom-link" onClick={toggleMenu}>
+                  <NavLink as={Link} to={"/contact"} className="custom-link" onClick={toggleMenu}>
                     <FormattedMessage id="app.contact" />
                   </NavLink>
-                  <NavLink as={Link} to={"/projects"} className="custom-link" onClick={toggleMenu}>
+                  {/* <NavLink as={Link} to={"/projects"} className="custom-link" onClick={toggleMenu}>
                     <FormattedMessage id="app.projects" />
                   </NavLink>
                   <NavLink as={Link} to={"/cv"} className="custom-link" onClick={toggleMenu}>

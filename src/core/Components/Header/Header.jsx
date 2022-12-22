@@ -18,7 +18,7 @@ const Header = () => {
           ></Avatar>
       </div>
       <div className="header__name">
-        <h1>Santa Ana Bar</h1>
+        <h1> Café Bar Santa Ana</h1>
         {/* <img src={text} className="header__text" alt={text} /> */}
         <p>
           c/Santa Ana&nbsp;-Plasencia
