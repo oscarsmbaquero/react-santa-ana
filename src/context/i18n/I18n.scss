@@ -1,0 +1,17 @@
+
+.button-i18n{
+    
+}
+.button-i18n:active{
+    border-radius:15px whitesmoke;
+   
+}
+.i18n{
+    display:flex;
+    align-items: center;
+
+    & p{
+        font-size: 20px;
+        color:black;
+    }
+}

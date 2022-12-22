@@ -1,0 +1,15 @@
+{
+    "app.contact": "Contacto",
+    "app.projects": "Proyectos",
+    "app.text": "Bienvenid@, a mi portfolio, aquí encontrarás información sobre mi formación académica, mi experiencia laboral y mis proyectos ,tanto personales como profesionales. Para cualquier duda, consulta o información, rellena el formulario y me pondré en contacto contigo lo antes posible.¡¡¡Gracias!!!",
+    "app.alert":"Consulta mis proyectos y descarga mi cv",
+    "app.mail":"Mail",
+    "app.name":"Nombre",
+    "app.comments": "Comentarios",
+    "app.send": "Enviar",
+    "app.home": "Inicio",
+    "app.header": "Desarrollador Full Stack",
+    "app.footer":"Contáctame en las redes sociales.",
+    "app.form":"Si tienes alguna duda o quieres más información. Por favor envíame un mensaje"
+
+  }
