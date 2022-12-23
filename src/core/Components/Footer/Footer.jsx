@@ -58,23 +58,40 @@ export default function App() {
       <MDBContainer className="text-center text-md-start mt-5">
         <MDBRow className="mt-3">
           <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-            <h3 className="fw-bold mb-4"><FormattedMessage id="app.reservas" /></h3>
-            <Button variant="contained"  sx={{
-                 mt: 2,
-                 mb: 0,
-                 borderRadius:8,
-                 color:'black' }}><FormattedMessage id="app.reservar" /></Button>
+            <h3 className="fw-bold mb-4">
+              <FormattedMessage id="app.reservas" />
+            </h3>
+            <Button
+              variant="contained"
+              sx={{
+                mt: 2,
+                mb: 0,
+                borderRadius: 8,
+                color: "black",
+              }}
+            >
+              <FormattedMessage id="app.reservar" />
+            </Button>
           </MDBCol>
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-4">
-            <h3 className="fw-bold mb-4"><FormattedMessage id="app.horario" /></h3>
-            <p><FormattedMessage id="app.martes" /> a <FormattedMessage id="app.sabado" /></p>
+            <h3 className="fw-bold mb-4">
+              <FormattedMessage id="app.horario" />
+            </h3>
+            <p>
+              <FormattedMessage id="app.martes" /> a{" "}
+              <FormattedMessage id="app.sabado" />
+            </p>
             <p>09:00-16:00 20:00-00:00</p>
-            <p><FormattedMessage id="app.domingo" /></p>
+            <p>
+              <FormattedMessage id="app.domingo" />
+            </p>
             <p>09:00-22:00</p>
           </MDBCol>
 
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-md-0 mb-4">
-            <h3 className="fw-bold mb-4"><FormattedMessage id="app.contact" /></h3>
+            <h3 className="fw-bold mb-4">
+              <FormattedMessage id="app.contact" />
+            </h3>
             <p>
               {/* <MDBIcon icon="home" className="me-2" /> */}
               <i class="fa-sharp fa-solid fa-location-dot"></i>
@@ -89,8 +106,8 @@ export default function App() {
               </a>
             </p>
             <p>
-              <MDBIcon icon="phone" className="me-3" />
-              <a href="tel:+34629990451">&nbsp;+34 629 990 451</a>
+              <MDBIcon icon="phone" />&nbsp;
+              <a href="tel:+34629990451">+34 629 990 451</a>
               {/* <br /> */}
               {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="tel:+34691487362">+ 34 618 932 661</a> */}

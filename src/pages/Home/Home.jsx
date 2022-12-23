@@ -1,12 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Parallax } from "react-parallax";
 
 
 const Home = () => {
   return (
     <>
-    <div className='firstMensaje'>
-     
-    </div>
+    
     </>
   )
 }
