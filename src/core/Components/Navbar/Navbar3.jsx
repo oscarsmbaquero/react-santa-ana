@@ -34,7 +34,7 @@ function OffcanvasExample() {
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-              placement="start"
+              placement="top"
               restoreFocus={false}
               show={menuOpen}
               onHide={handleClose}
