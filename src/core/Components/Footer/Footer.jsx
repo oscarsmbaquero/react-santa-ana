@@ -59,7 +59,11 @@ export default function App() {
         <MDBRow className="mt-3">
           <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
             <h3 className="fw-bold mb-4">Reservas</h3>
-            <Button variant="contained">Reservar</Button>
+            <Button variant="contained"  sx={{
+                 mt: 2,
+                 mb: 0,
+                 borderRadius:8,
+                 color:'black' }}>Reservar</Button>
           </MDBCol>
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-4">
             <h3 className="fw-bold mb-4">Horario</h3>
