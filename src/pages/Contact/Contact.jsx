@@ -18,23 +18,23 @@ import "aos/dist/aos.css";
 
 
 
-function Copyright(props) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.primary"
-      align="center"
-      {...props}
-    >
-      {"Copyright © "}
-      <Link color="inherit" href="https://github.com/oscarsmbaquero">
-       OIT -Soluciones y Servicios Tecnológicos.
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+// function Copyright(props) {
+//   return (
+//     <Typography
+//       variant="body2"
+//       color="text.primary"
+//       align="center"
+//       {...props}
+//     >
+//       {"Copyright © "}
+//       <Link color="inherit" href="https://github.com/oscarsmbaquero">
+//        OIT -Soluciones y Servicios Tecnológicos.
+//       </Link>{" "}
+//       {new Date().getFullYear()}
+//       {"."}
+//     </Typography>
+//   );
+// }
 const theme = createTheme();
 
 export default function SignUp() {
@@ -70,7 +70,7 @@ export default function SignUp() {
   return (
     <div className="form" data-aos="fade-left">
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs">
+      <Container component="main" maxWidth="md">
         <CssBaseline />
         <Box
           sx={{
@@ -125,7 +125,7 @@ export default function SignUp() {
                  mt: 2,
                  mb: 0,
                  borderRadius:8,
-                 color:'black' }}
+                 color:'white' }}
             >
               <FormattedMessage id="app.send"/>
             </Button>

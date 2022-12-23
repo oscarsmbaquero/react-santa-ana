@@ -79,6 +79,11 @@ function App() {
                       />
                     ))}
                   </Routes>
+                  <div className="i18n">
+                    <figure>
+                      <I18n></I18n>
+                    </figure>
+                  </div>
                 </div>
                 <Footer />
               </Router>

@@ -64,7 +64,7 @@ const I18n = () => {
           ></Avatar>
         </IconButton>
       )} */}
-      {locale === "fr" ? (
+      {/* {locale === "fr" ? (
         ""
       ) : (
         <IconButton onClick={() => selectLanguage("fr")}>
@@ -75,7 +75,7 @@ const I18n = () => {
             aria-label="recipe"
           ></Avatar>
         </IconButton>
-      )}
+      )} */}
     </div>
   );
 };

@@ -23,14 +23,14 @@ function OffcanvasExample() {
   return (
     <>
       {["xs"].map((expand) => (
-        <Navbar key={expand} bg="transparent" expand={expand} className="mb-3">
+        <Navbar key={expand} bg="transparent" expand={expand}>
           <Container fluid>
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
               onClick={toggleMenu}
             ></Navbar.Toggle>
             <Navbar.Brand > <Avatar className="avatar" src={logo} alt="logo"  sx={{ width: 60, height: 60 }}></Avatar></Navbar.Brand>
-            <Navbar.Brand ><I18n/></Navbar.Brand>
+            {/* <Navbar.Brand ><I18n/></Navbar.Brand> */}
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -52,15 +52,6 @@ function OffcanvasExample() {
                   <NavLink as={Link} to={"/contact"} className="custom-link" onClick={toggleMenu}>
                     <FormattedMessage id="app.contact" />
                   </NavLink>
-                  {/* <NavLink as={Link} to={"/projects"} className="custom-link" onClick={toggleMenu}>
-                    <FormattedMessage id="app.projects" />
-                  </NavLink>
-                  <NavLink as={Link} to={"/cv"} className="custom-link" onClick={toggleMenu}>
-                    Cv
-                  </NavLink>
-                  <NavLink as={Link} to={"/stack"} className="custom-link" onClick={toggleMenu}>
-                    Stack
-                  </NavLink> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

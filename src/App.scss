@@ -11,6 +11,7 @@
    url('./assets/images/fondo.jpg');
    display: block;
    background-size: cover;
+   background-position: center center;
 }
 .main{
   min-height: 75vh;
@@ -51,21 +52,21 @@ p{
   font-size: 22px;
   margin: 0;
 }
-.button-git {
+.i18n {
   position: fixed;
   top: 7rem;
-  right: 0.5rem;
+  right: 1.5rem;
 
 }
 
-.button-git img {
+.i18n img {
   width: 3rem;
 
   @media screen  and (max-width: 760px) {
     width: 2rem;
     }
 }
-.button-git img:hover {
+.i18n img:hover {
   cursor: pointer;
 }
 figcaption {
