@@ -36,10 +36,10 @@ export default function App() {
             <MDBIcon color="danger" fab icon="chrome" />
           </a>
           <a href="" className="me-4 text-reset">
-            <MDBIcon color="primary" fab icon="linkedin" />
+            <MDBIcon color="primary" fab icon="facebook" />
           </a>
           <a href="" className="me-4 text-reset">
-            <MDBIcon color="light" fab icon="github" />
+            <MDBIcon color="danger" fab icon="instagram" />
           </a>
           <a
             href="https://wa.me/+34608722702"
@@ -58,23 +58,23 @@ export default function App() {
       <MDBContainer className="text-center text-md-start mt-5">
         <MDBRow className="mt-3">
           <MDBCol md="2" lg="2" xl="2" className="mx-auto mb-4">
-            <h3 className="fw-bold mb-4">Reservas</h3>
+            <h3 className="fw-bold mb-4"><FormattedMessage id="app.reservas" /></h3>
             <Button variant="contained"  sx={{
                  mt: 2,
                  mb: 0,
                  borderRadius:8,
-                 color:'black' }}>Reservar</Button>
+                 color:'black' }}><FormattedMessage id="app.reservar" /></Button>
           </MDBCol>
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-4">
-            <h3 className="fw-bold mb-4">Horario</h3>
-            <p>MARTES A SABADO</p>
-            <p>14:00-16:00 21:00-23:00</p>
-            <p>DOMINGO</p>
-            <p>14:00-16:00</p>
+            <h3 className="fw-bold mb-4"><FormattedMessage id="app.horario" /></h3>
+            <p><FormattedMessage id="app.martes" /> a <FormattedMessage id="app.sabado" /></p>
+            <p>09:00-16:00 20:00-00:00</p>
+            <p><FormattedMessage id="app.domingo" /></p>
+            <p>09:00-22:00</p>
           </MDBCol>
 
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-md-0 mb-4">
-            <h3 className="fw-bold mb-4">Contacto</h3>
+            <h3 className="fw-bold mb-4"><FormattedMessage id="app.contact" /></h3>
             <p>
               {/* <MDBIcon icon="home" className="me-2" /> */}
               <i class="fa-sharp fa-solid fa-location-dot"></i>

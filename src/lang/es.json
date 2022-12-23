@@ -9,7 +9,13 @@
     "app.send": "Enviar",
     "app.home": "Inicio",
     "app.header": "Desarrollador Full Stack",
-    "app.footer":"Contáctame en las redes sociales.",
-    "app.form":"Rellena nuestro formulario de reserva online y disfruta de la experiencia Santa Ana con unos pocos clics. Una vez recibida la solicitud nos pondremos en contacto con usted para confirmar los datos de la reserva."
+    "app.footer":"Siguenos en las redes sociales.",
+    "app.form":"Rellena nuestro formulario de reserva online y disfruta de la experiencia Santa Ana con unos pocos clics. Una vez recibida la solicitud nos pondremos en contacto con usted para confirmar los datos de la reserva.",
+    "app.reservas":"Reservas",
+    "app.horario":"Horario",
+    "app.martes":"Martes",
+    "app.sabado":"Sábado",
+    "app.domingo":"Domingo",
+    "app.reservar":"Reservar"
 
   }
