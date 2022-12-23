@@ -27,16 +27,22 @@
 }
 .navbar-toggler {
   // border-radius: 50%;
-  margin: 0 auto;
+  // margin: 0 auto;
   border: solid 2px white;
   align-items: center;
-  font-size: 1.5em;  
+  font-size: 1em;  
   background-color: white;
-}
-.navbar-toggler-icon {
-  color: red;
 }
 .navbar-toggler:focus,
 .navbar-toggler:hover {
   background-color: white;
+}
+.avatar{
+  @media screen  and (min-width: 760px) {  
+    border-radius: 50%;
+    }
+}
+.avatar:hover{
+  transform: rotate(360deg);
+  transition-duration: 2s;
 }

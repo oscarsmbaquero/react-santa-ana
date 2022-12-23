@@ -5,6 +5,7 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink, Link } from "react-router-dom";
 import { IntlProvider, FormattedMessage } from "react-intl";
 import React, { Component, useRef, useState } from "react";
+import I18n from "../../../context/i18n/I18n";
 //import I18n from '../../../context/i18n/I18n';
 import logo from "../../../assets/images/logo.jpg";
 import "./Navbar.scss";
@@ -24,11 +25,12 @@ function OffcanvasExample() {
       {["xs"].map((expand) => (
         <Navbar key={expand} bg="transparent" expand={expand} className="mb-3">
           <Container fluid>
-            {/* <Navbar.Brand > <I18n /></Navbar.Brand> */}
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
               onClick={toggleMenu}
             ></Navbar.Toggle>
+            <Navbar.Brand > <Avatar className="avatar" src={logo} alt="logo"  sx={{ width: 86, height: 86 }}></Avatar></Navbar.Brand>
+            <Navbar.Brand ><I18n/></Navbar.Brand>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
