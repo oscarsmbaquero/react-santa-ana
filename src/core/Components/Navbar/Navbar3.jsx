@@ -29,7 +29,7 @@ function OffcanvasExample() {
               aria-controls={`offcanvasNavbar-expand-${expand}`}
               onClick={toggleMenu}
             ></Navbar.Toggle>
-            <Navbar.Brand > <Avatar className="avatar" src={logo} alt="logo"  sx={{ width: 86, height: 86 }}></Avatar></Navbar.Brand>
+            <Navbar.Brand > <Avatar className="avatar" src={logo} alt="logo"  sx={{ width: 60, height: 60 }}></Avatar></Navbar.Brand>
             <Navbar.Brand ><I18n/></Navbar.Brand>
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
