@@ -89,9 +89,13 @@ export default function SignUp() {
 
   return (
     <div className="form" data-aos="fade-left">
-     { showAlert && 
+    <div className="alert"> 
+    { showAlert && 
         <Alert severity="error">{errorMessage}</Alert>
       }
+
+    </div>
+    
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="md">
           <CssBaseline />
