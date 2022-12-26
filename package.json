@@ -5,10 +5,8 @@
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
-   
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/lab": "^4.0.0-alpha.61",
+    "@emotion/styled": "^11.10.5",   
+    "@material-ui/icons": "^4.11.3",   
     "@mui/icons-material": "^5.10.16",
     "@mui/lab": "^5.0.0-alpha.113",
     "@mui/material": "^5.11.1",
