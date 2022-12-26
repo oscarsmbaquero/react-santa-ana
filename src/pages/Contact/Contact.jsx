@@ -41,19 +41,20 @@ const theme = createTheme();
 export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
-  //const [showAlert, setShowAlert] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
-      setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
-      //setShowAlert(true);
-      // Swal.fire({
-      //   //title: "Success!",
-      //   text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
-      //   icon: "error",
-      //   confirmButtonText: "Ok",
-      // });
+      // setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
+      // setShowAlert(true);
+      Swal.fire({
+        //title: "Success!",
+        text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
+        icon: "error",
+        confirmButtonText: "Ok",
+      });
+      navigate("/contact")
     } else {
       setComensales(event.target.value);
     }
@@ -89,12 +90,12 @@ export default function SignUp() {
 
   return (
     <div className="form" data-aos="fade-left">
-    {/* <div className="alert"> 
+   
     { showAlert && 
-        <Alert severity="error">{errorMessage}</Alert>
+        {/* <Alert severity="error">{errorMessage}</Alert> */}
       }
 
-    </div> */}
+  
     
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="md">
