@@ -17,6 +17,7 @@ import "aos/dist/aos.css";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
+import Alert from '../../core/Alert/MuiAlert'
 //import { Alert } from '@material-ui/lab';
 
 // function Copyright(props) {
@@ -46,20 +47,20 @@ export default function SignUp() {
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
-      // setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
-      // setShowAlert(true);
-      Swal.fire({
-        //title: "Success!",
-        text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
-        icon: "error",
-        confirmButtonText: "Ok",
-      });
+      setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
+      setShowAlert(true);
+      // Swal.fire({
+      //   //title: "Success!",
+      //   text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
+      //   icon: "error",
+      //   confirmButtonText: "Ok",
+      // });
       navigate("/contact")
     } else {
       setComensales(event.target.value);
     }
   };
-  console.log(comensales, "comensales");
+  console.log(errorMessage, "comensales");
 
   const sendMail = (e) => {
     e.preventDefault();
@@ -92,7 +93,7 @@ export default function SignUp() {
     <div className="form" data-aos="fade-left">
    
     { showAlert && 
-        {/* <Alert severity="error">{errorMessage}</Alert> */}
+        <Alert errorMessage={errorMessage}></Alert>
       }
 
   
