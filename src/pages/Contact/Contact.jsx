@@ -43,48 +43,44 @@ export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
   const [showAlert, setShowAlert] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [message, setMessage] = useState("");
+  const [severity, setSeverity] = useState("");
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
-      setErrorMessage(
+      setMessage(
         "Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias"
       );
+      setSeverity('error');
       setShowAlert(true);
-      // Swal.fire({
-      //   //title: "Success!",
-      //   text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
-      //   icon: "error",
-      //   confirmButtonText: "Ok",
-      // });
       navigate("/contact");
     } else {
       setComensales(event.target.value);
     }
   };
-  console.log(errorMessage, "comensales");
+  console.log(message, "comensales");
 
   const sendMail = (e) => {
     e.preventDefault();
-    // try {
-    //   emailjs
-    //     .sendForm(
-    //       "service_kqpmbaa",
-    //       "template_2c1n23x",
-    //       e.target,
-    //       "dso8n6rVU1ADlfbV4"
-    //     )
-    //     .then((response) => console.log(response));
-    //   Swal.fire({
-    //     title: "Success!",
-    //     text: " Mensaje enviado. Gracias!!!!!",
-    //     icon: "success",
-    //     confirmButtonText: "Ok",
-    //   });
-    //   navigate("/");
-    // } catch (error) {
-    //   navigate("/");
-    // }
+    try {
+      // emailjs
+      //   .sendForm(
+      //     "service_kqpmbaa",
+      //     "template_2c1n23x",
+      //     e.target,
+      //     "dso8n6rVU1ADlfbV4"
+      //   )
+      //   .then((response) => console.log(response));
+      Swal.fire({
+        title: "Success!",
+        text: " Mensaje enviado. Gracias!!!!!",
+        icon: "success",
+        confirmButtonText: "Ok",
+      });
+      navigate("/");
+    } catch (error) {
+      navigate("/");
+    }
   };
 
   useEffect(() => {
@@ -184,7 +180,7 @@ export default function SignUp() {
                 <MenuItem value={9}>9</MenuItem>
                 <MenuItem value={10}>+ 10</MenuItem>
               </Select>
-              {showAlert && <Alert errorMessage={errorMessage}></Alert>}
+              {showAlert && <Alert message={message} severity={severity}></Alert>}
               <Button
                 type="submit"
                 fullWidth
