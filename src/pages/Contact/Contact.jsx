@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
@@ -14,11 +14,10 @@ import { IntlProvider, FormattedMessage } from "react-intl";
 import "./Contact.scss";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { MobileDatePicker } from "@mui/x-date-pickers/MobileDatePicker";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-//import  TextArea  from '@material-ui/core';
+import { Alert } from '@material-ui/lab';
 
 // function Copyright(props) {
 //   return (
@@ -42,15 +41,19 @@ const theme = createTheme();
 export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
+  const [showAlert, setShowAlert] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
-      Swal.fire({
-        //title: "Success!",
-        text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
-        icon: "error",
-        confirmButtonText: "Ok",
-      });
+      setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
+      setShowAlert(true);
+      // Swal.fire({
+      //   //title: "Success!",
+      //   text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
+      //   icon: "error",
+      //   confirmButtonText: "Ok",
+      // });
     } else {
       setComensales(event.target.value);
     }
@@ -86,6 +89,9 @@ export default function SignUp() {
 
   return (
     <div className="form" data-aos="fade-left">
+     { showAlert && 
+        <Alert severity="error">{errorMessage}</Alert>
+      }
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="md">
           <CssBaseline />
