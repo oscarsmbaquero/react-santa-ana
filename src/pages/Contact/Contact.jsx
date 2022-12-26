@@ -17,7 +17,7 @@ import "aos/dist/aos.css";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import Alert from '../../core/Alert/MuiAlert'
+import Alert from "../../core/Alert/MuiAlert";
 //import { Alert } from '@material-ui/lab';
 
 // function Copyright(props) {
@@ -43,11 +43,13 @@ export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
   const [showAlert, setShowAlert] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
-      setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
+      setErrorMessage(
+        "Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias"
+      );
       setShowAlert(true);
       // Swal.fire({
       //   //title: "Success!",
@@ -55,7 +57,7 @@ export default function SignUp() {
       //   icon: "error",
       //   confirmButtonText: "Ok",
       // });
-      navigate("/contact")
+      navigate("/contact");
     } else {
       setComensales(event.target.value);
     }
@@ -91,13 +93,6 @@ export default function SignUp() {
 
   return (
     <div className="form" data-aos="fade-left">
-   
-    { showAlert && 
-        <Alert errorMessage={errorMessage}></Alert>
-      }
-
-  
-    
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="md">
           <CssBaseline />
@@ -189,7 +184,7 @@ export default function SignUp() {
                 <MenuItem value={9}>9</MenuItem>
                 <MenuItem value={10}>+ 10</MenuItem>
               </Select>
-
+              {showAlert && <Alert errorMessage={errorMessage}></Alert>}
               <Button
                 type="submit"
                 fullWidth
