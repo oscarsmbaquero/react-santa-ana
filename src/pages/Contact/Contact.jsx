@@ -17,7 +17,7 @@ import "aos/dist/aos.css";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import { Alert } from '@material-ui/lab';
+//import { Alert } from '@material-ui/lab';
 
 // function Copyright(props) {
 //   return (
@@ -41,13 +41,13 @@ const theme = createTheme();
 export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
-  const [showAlert, setShowAlert] = useState(false);
+  //const [showAlert, setShowAlert] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
       setErrorMessage('Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias');
-      setShowAlert(true);
+      //setShowAlert(true);
       // Swal.fire({
       //   //title: "Success!",
       //   text: "Para Grupos superiores a 10 personas consulte disponibiliad por teléfono",
@@ -89,12 +89,12 @@ export default function SignUp() {
 
   return (
     <div className="form" data-aos="fade-left">
-    <div className="alert"> 
+    {/* <div className="alert"> 
     { showAlert && 
         <Alert severity="error">{errorMessage}</Alert>
       }
 
-    </div>
+    </div> */}
     
       <ThemeProvider theme={theme}>
         <Container component="main" maxWidth="md">
