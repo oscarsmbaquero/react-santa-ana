@@ -100,24 +100,24 @@ export default function App() {
               {/* <MDBIcon icon="home" className="me-2" /> */}
               <i class="fa-sharp fa-solid fa-location-dot"></i>
               <a href="https://www.google.com/search?q=cafe%20bar%20santa%20ana&rlz=1C1VDKB_esES994ES994&oq=cafe+bar+santa+ana&aqs=chrome..69i57j0i22i30l5.8625j0j4&sourceid=chrome&ie=UTF-8&tbs=lf:1,lf_ui:9&tbm=lcl&sxsrf=ALiCzsZOr2yR6pCktag1QrQK0rZ5w2ZAdg:1671745891562&rflfq=1&num=10&rldimm=5796121961842873923&lqi=ChJjYWZlIGJhciBzYW50YSBhbmFI9deW68urgIAIWiIQABABEAIQAxgAGAIYAyISY2FmZSBiYXIgc2FudGEgYW5hkgEEY2FmZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VRdGVtSkhPWHBSUlJBQqoBGhABKhYiEmNhZmUgYmFyIHNhbnRhIGFuYSgO&phdesc=WxjpiVTFgYU&ved=2ahUKEwiasJXgmo78AhUNgf0HHXmCDJIQvS56BAgKEAE&sa=X&rlst=f#rlfi=hd:;si:5796121961842873923,l,ChJjYWZlIGJhciBzYW50YSBhbmFI9deW68urgIAIWiIQABABEAIQAxgAGAIYAyISY2FmZSBiYXIgc2FudGEgYW5hkgEEY2FmZZoBJENoZERTVWhOTUc5blMwVkpRMEZuU1VRdGVtSkhPWHBSUlJBQqoBGhABKhYiEmNhZmUgYmFyIHNhbnRhIGFuYSgO,y,WxjpiVTFgYU;mv:[[41.9228537,-3.1675983],[36.2092155,-6.9923391]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!1m4!1u1!2m2!1m1!1e1!1m4!1u1!2m2!1m1!1e2!2m1!1e2!2m1!1e1!2m1!1e3!3sIAE,lf:1,lf_ui:9">
-                &nbsp; Pl. Sta. Ana, 4
+                &nbsp;<FormattedMessage id="app.plaza" />
               </a>
             </p>
             <p>
-              <MDBIcon icon="envelope" className="me-3" />
+              <MDBIcon icon="envelope"className="me-1" />
               <a href="mailto:favoritgastrobar@gmail.com">
-                &nbsp;cafesantaana@gmail.com
+                cafesantaana@gmail.com
               </a>
             </p>
             <p>
-              <MDBIcon icon="phone" />&nbsp;
+              <MDBIcon icon="phone" className="me-1" />
               <a href="tel:+34629990451">+34 629 990 451</a>
               {/* <br /> */}
               {/* &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="tel:+34691487362">+ 34 618 932 661</a> */}
             </p>
             <p>
-              <MDBIcon color="success" fab icon="whatsapp" />
+              <MDBIcon color="success" fab icon="whatsapp" className="me-1" />
               <a
                 href="https://wa.me/+34629990451"
                 class="whatsapp_float"
