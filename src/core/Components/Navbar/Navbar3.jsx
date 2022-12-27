@@ -50,7 +50,7 @@ function OffcanvasExample() {
                     <FormattedMessage id="app.home" />
                   </NavLink>
                   <NavLink as={Link} to={"/contact"} className="custom-link" onClick={toggleMenu}>
-                    <FormattedMessage id="app.contact" />
+                    <FormattedMessage id="app.reservar" />
                   </NavLink>
                 </Nav>
               </Offcanvas.Body>

@@ -5,6 +5,7 @@ import IconButton from '@mui/material/IconButton';
 import Collapse from '@mui/material/Collapse';
 import Button from '@mui/material/Button';
 import CloseIcon from '@mui/icons-material/Close';
+import { FormattedMessage } from "react-intl";
 
 
 const MuiAlert = ({message, severity}) => {
@@ -29,7 +30,7 @@ const MuiAlert = ({message, severity}) => {
           }
           sx={{ mb: 2 }}
         >
-          {message}
+           <FormattedMessage id="app.mensajeError" />
         </Alert>
       </Collapse>
       {/* <Button

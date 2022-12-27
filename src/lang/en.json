@@ -19,5 +19,10 @@
   "app.martes":"Tuesday",
   "app.sabado":"Saturday",
   "app.domingo":"Sunday",
-  "app.reservar":"Reserve"
+  "app.reservar":"Reserve",
+  "app.condiciones":"Legal conditions",
+  "app.texto":"Welcome to the reservation portal of Café Bar Santa Ana, do not reserve a superior number of diners as desired It is important that the number of diners who attend the restaurant is the same that appears in the reservation, because you are less we will charge 25 € for each guest who does not know present Your reservation is accepted once you receive ours confirmation, if you do not receive said confirmation, try again because something has failed.",
+  "app.aceptar":"Accept",
+  "app.mensajeError":"For reservations of more than 10 diners, consult availability by telephone. Thank you",
+  "app.a":"to"
   }

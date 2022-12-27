@@ -18,6 +18,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
 import Alert from "../../core/Alert/MuiAlert";
+import Confirm from "../../core/Alert/ConfirmDialog/Confirm";
 //import { Alert } from '@material-ui/lab';
 
 // function Copyright(props) {
@@ -42,53 +43,58 @@ const theme = createTheme();
 export default function SignUp() {
   let navigate = useNavigate();
   const [comensales, setComensales] = React.useState("");
-  const [showAlert, setShowAlert] = useState('');
+  const [showAlert, setShowAlert] = useState("");
   const [message, setMessage] = useState("");
   const [severity, setSeverity] = useState("");
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  // useEffect(() => {
+  //   handleClickOpen();
+  // }, []);
+
+  const handleClose = () => {
+    setOpen(false);
+    navigate("/");
+  };
 
   const handleChange = (event) => {
     if (event.target.value === 10) {
       setMessage(
         "Para reservas de mas de 10 comensales, consulte disponibilidad por teléfono. Gracias"
       );
-      setSeverity('error');
-      setShowAlert('error');
+      setSeverity("error");
+      setShowAlert("error");
       navigate("/contact");
     } else {
       setComensales(event.target.value);
     }
   };
-  //console.log(message, "comensales");
-
   const sendMail = (e) => {
     e.preventDefault();
-    setMessage(
-      " Le confirmaremos su reserva lo antes posible. Gracias!!"
-    );
-    setSeverity('success');
-      setShowAlert('success');
-    // try {
-    //   // emailjs
-    //   //   .sendForm(
-    //   //     "service_kqpmbaa",
-    //   //     "template_2c1n23x",
-    //   //     e.target,
-    //   //     "dso8n6rVU1ADlfbV4"
-    //   //   )
-    //   //   .then((response) => console.log(response));
-    //   // Swal.fire({
-    //   //   title: "Success!",
-    //   //   text: " Mensaje enviado. Gracias!!!!!",
-    //   //   icon: "success",
-    //   //   confirmButtonText: "Ok",
-    //   // });
-    setTimeout(() => {
+
+    try {
+      emailjs
+        .sendForm(
+          "service_kqpmbaa",
+          "template_2c1n23x",
+          e.target,
+          "dso8n6rVU1ADlfbV4"
+        )
+        .then((response) => console.log(response));
+      // setMessage("Le confirmaremos la reserva lo antes posible. Gracias");
+      // setSeverity("success");
+      // setShowAlert("success");
+      // setTimeout(() => {
+      //   navigate("/");
+      // }, 2000);
+      //setOpen(true);
+    } catch (error) {
       navigate("/");
-    }, 2500);
-      
-    // } catch (error) {
-    //   navigate("/");
-    // }
+    }
   };
 
   useEffect(() => {
@@ -136,7 +142,7 @@ export default function SignUp() {
                 margin="normal"
                 required
                 fullWidth
-                name="question"
+                name="telefono"
                 label=<FormattedMessage id="app.tlf" />
                 type="text"
                 id="password"
@@ -151,6 +157,7 @@ export default function SignUp() {
                 fullWidth
                 required
                 variant="outlined"
+                name="comentarios"
               />
               <TextField
                 id="datetime-local"
@@ -158,6 +165,7 @@ export default function SignUp() {
                 label=<FormattedMessage id="app.fecha" />
                 type="datetime-local"
                 margin="normal"
+                name="fecha"
                 defaultValue="2022-05-24T10:30"
                 fullWidth
                 InputLabelProps={{
@@ -173,6 +181,7 @@ export default function SignUp() {
                 value={comensales}
                 required
                 margin="normal"
+                name="comensales"
                 fullWidth
                 label="Age"
                 onChange={handleChange}
@@ -188,10 +197,16 @@ export default function SignUp() {
                 <MenuItem value={9}>9</MenuItem>
                 <MenuItem value={10}>+ 10</MenuItem>
               </Select>
-              {showAlert ==='error' && <Alert message={message} severity={severity}></Alert>}
-              {showAlert ==='success' && <Alert message={message} severity={severity}></Alert>}
+              {showAlert === "error" && (
+                <Alert message={message} severity={severity}></Alert>
+              )}
+              <Confirm open={open} handleClose={handleClose} />
+              {/* {showAlert === "success" && (
+                <Alert message={message} severity={severity}></Alert>
+              )} */}
               <Button
                 type="submit"
+                onClick={handleClickOpen}
                 fullWidth
                 variant="contained"
                 sx={{

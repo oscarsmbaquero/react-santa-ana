@@ -7,7 +7,8 @@ import {
   MDBIcon,
 } from "mdb-react-ui-kit";
 import { Button, Link, Typography } from "@mui/material";
-import { IntlProvider, FormattedMessage } from "react-intl";
+import { FormattedMessage } from "react-intl";
+import { NavLink } from "react-router-dom";
 
 export default function App() {
   function Copyright(props) {
@@ -33,13 +34,13 @@ export default function App() {
         </div>
         <div>
           <a href="" className="me-4 text-reset">
-            <MDBIcon color="danger" fab icon="chrome" />
+            <MDBIcon color="danger" fab icon="chrome"  size='2x'/>
+          </a>
+          <a href="" className="me-4 text-reset" >
+            <MDBIcon color="primary" fab icon="facebook" size='2x' />
           </a>
           <a href="" className="me-4 text-reset">
-            <MDBIcon color="primary" fab icon="facebook" />
-          </a>
-          <a href="" className="me-4 text-reset">
-            <MDBIcon color="danger" fab icon="instagram" />
+            <MDBIcon color="danger" fab icon="instagram" size='2x'/>
           </a>
           <a
             href="https://wa.me/+34608722702"
@@ -48,7 +49,7 @@ export default function App() {
             rel="noopener noreferrer"
             className="me-4 text-reset"
           >
-            <MDBIcon color="success" fab icon="whatsapp" />
+            <MDBIcon color="success" fab icon="whatsapp" size='2x'/>
           </a>
         </div>
       </section>
@@ -61,6 +62,7 @@ export default function App() {
             <h3 className="fw-bold mb-4">
               <FormattedMessage id="app.reservas" />
             </h3>
+            <NavLink as={Link} to={"/contact"}>
             <Button
               variant="contained"
               sx={{
@@ -72,13 +74,15 @@ export default function App() {
             >
               <FormattedMessage id="app.reservar" />
             </Button>
+            </NavLink>
           </MDBCol>
           <MDBCol md="4" lg="4" xl="2" className="mx-auto mb-4">
             <h3 className="fw-bold mb-4">
               <FormattedMessage id="app.horario" />
             </h3>
             <p>
-              <FormattedMessage id="app.martes" /> a{" "}
+              <FormattedMessage id="app.martes" />&nbsp;
+              <FormattedMessage id="app.a" />&nbsp;
               <FormattedMessage id="app.sabado" />
             </p>
             <p>09:00-16:00 20:00-00:00</p>
